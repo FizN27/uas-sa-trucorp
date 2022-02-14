@@ -27,6 +27,7 @@ table, th, td {
 
             $result = mysqli_query($db, $query);
             
+            $total = 0;
             while($row = mysqli_fetch_assoc($result)){
                 echo "<tr>
                 <td>" . $row['id'] . "</td>" .
@@ -34,7 +35,10 @@ table, th, td {
                 "<td>" . $row['alamat'] . "</td>" .
                 "<td>" . $row['jabatan'] . "</td>
                 </tr>";
+                $total++;
             }
+
+            echo "Total: $total users in db";
 
             mysqli_close($db);
         ?>
