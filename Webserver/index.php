@@ -39,7 +39,6 @@ table, th, td {
             }
 
             echo "Total: $total users in db";
-
             mysqli_close($db);
         ?>
     </table>
